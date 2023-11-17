@@ -1,0 +1,44 @@
+{% extends 'userhome.html' %}
+
+
+{% block contentlayout %} 
+    <div class="col-md-8">
+    <h1>Tenders >> {{subcatname}}</h1>
+    <br/>
+    {% for t in tlist %}
+    <table class="table table-bordered">
+    <tr>
+    <td style="width:40%">TenderID</td>
+    <td>{{t.tenderid}}</td>    
+    </tr>
+    <tr>
+    <td>Category</td>
+    <td>{{t.subcatname}}</td>    
+    </tr>    
+    <tr>
+    <td>Description</td>
+    <td>{{t.description}}</td>    
+    </tr>
+    <tr>
+    <td>Launch Date</td>
+    <td>{{t.ldate}}</td>    
+    </tr>
+    <tr>
+    <td>End Date</td>
+    <td>{{t.edate}}</td>    
+    </tr>
+    </table>  
+    <br/><br/>  
+    {% endfor %}
+    </div>
+    <div class="col-md-4">
+    <h1>Sub Category List</h1>
+    {% for c in sclist %}
+    <a href="/user/viewsearchtenders/?subcatname={{c.subcatname}}">{{c.subcatname}}</a>
+    <br/><br/>
+    {% endfor %}    
+    </div>
+{% endblock %}
+
+
+

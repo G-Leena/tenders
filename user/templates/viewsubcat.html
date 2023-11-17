@@ -1,0 +1,50 @@
+{% extends 'userhome.html' %}
+
+
+{% block contentlayout %} 
+    <div class="col-md-8">
+            <style>
+                    #catmain
+                    {
+                     min-height:auto;
+                     width:600px;
+                    }
+                    .catmain_part
+                    {
+                     height:150px;
+                     width:200px;
+                     float:left; 
+                    }
+                    .catmain_part img
+                    {
+                     border:1px solid black;     
+                    }
+                    </style>
+                    
+                    <h1>Sub Category List >> {{catname}}</h1>
+                    <center>
+                    <div id="catmain" >
+                    {% for row in sclist %}
+                        <a href="/user/viewsearchtenders/?subcatname={{row.subcatname}}" >    
+                        <div class="catmain_part">
+                            <img src="{{media_url}}{{row.subcaticonname}}" height="100" width="100" />
+                            <br/>
+                            <b>{{row.subcatname}}</b>
+                            <br/><br/>
+                        </div>
+                        </a>    
+                    {% endfor %}    
+                    </div>
+                    </center>
+    </div>
+    <div class="col-md-4">
+    <h1>Category List</h1>
+    {% for c in clist %}
+    <a href="/user/viewsubcat/?catname={{c.catname}}">{{c.catname}}</a>
+    <br/><br/>
+    {% endfor %}    
+    </div>
+{% endblock %}
+
+
+

@@ -1,0 +1,27 @@
+{% extends 'userhome.html' %}
+{% load static %}
+
+{% block content %} 
+<center>
+<h1>Change Password Here!!!</h1>
+
+<p style="color:blue;">{{output}}</p>
+<form method="POST" action="/user/cpuser/">
+{% csrf_token %}  
+  <div class="form-group">
+    <label for="opwd">Old Password:</label>
+    <input type="password" class="form-control" name="opass">
+  </div>
+  <div class="form-group">
+    <label for="npwd">New Password:</label>
+    <input type="password" class="form-control" name="npass">
+  </div>
+  <div class="form-group">
+    <label for="cnpwd">Confirm New Password:</label>
+    <input type="password" class="form-control" name="cnpass">
+  </div>
+  <button type="submit" class="btn btn-success">Change Password</button>
+</form>
+
+</center>
+{% endblock %}

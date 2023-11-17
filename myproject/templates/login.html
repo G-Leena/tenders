@@ -1,0 +1,26 @@
+{% extends 'master_template.html' %}
+
+
+{% block content %}
+<h2>Login Here!!!</h2>
+<p style="color:blue;">{{output}}</p>
+<form method="POST" action="/login/">
+{% csrf_token %} 
+ 
+ <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" name="email" value="{{cunm}}">
+  </div>
+
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" name="password" value="{{cpass}}" >
+  </div>
+
+  <div class="form-group">
+    <input type="checkbox" name="chk" value="remember"> Remember me?
+  </div>
+  <button type="submit" class="btn btn-success">Login</button>
+</form> 
+
+{% endblock %}

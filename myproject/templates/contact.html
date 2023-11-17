@@ -1,0 +1,74 @@
+{% extends 'master_template.html' %}
+
+
+{% block content %} 
+<html lang = "en">  
+   <head>  
+      <meta charset = "utf-8">  
+      <title> Bootstrap4 Contact Form Example </title>  
+      <meta name = "viewport" content = "width = device-width, initial-scale = 1, shrink-to-fit = no">       
+  <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">   
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">  
+<style>  
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,300);  
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);  
+  
+body {   
+    height: 100%; width: 100%;   
+    background-color: #333;   
+    color: whitesmoke;   
+    font-size: 16px;   
+    font-family: 'Lato';  
+}   
+</style>  
+<body>  
+  <section class="resume-section p-4 p-lg-5 text-center" id="contact">  
+        <div class="my-auto">  
+          <h2 class="mb-4"> Contact To Us</h2>  
+          <form  
+            class="contact-form d-flex flex-column align-items-center"  
+            action="#"  
+            method="POST"> 
+            
+            
+            <div class="form-group w-75">  
+              <input type="name" class="form-control"  
+                placeholder="Enter Name"  
+                name="name"  
+                required  />  
+            </div> 
+            
+            <div class="form-group w-75">
+                <input type="email" class="form-control" placeholder="Enter Mobile Number" name="name" required />
+            </div>
+
+
+            <div class="form-group w-75">  
+              <input  
+                type="tel"  
+                class="form-control"  
+                placeholder="Enter Email"  
+                name="name"  
+                required  
+              />  
+            </div>  
+  
+            <div class="form-group w-75">  
+              <textarea  class="form-control"  
+                type="text" placeholder="Message" rows="7" name="name" required > Write Your Message here ...................</textarea>  
+            </div>  
+
+
+            <button type="submit" class="btn btn-submit btn-info w-75"> Submit </button>  
+          </form>  
+        </div>  
+      </section>  
+  <script  
+      defer  
+      src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"  
+      integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"  
+      crossorigin="anonymous"> </script>  
+</body>  
+</html>  
+                 
+{% endblock %}

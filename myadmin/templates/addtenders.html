@@ -1,0 +1,39 @@
+{% extends 'adminhome.html' %}
+
+{% block content %} 
+
+<h1>Add Tenders!!!</h1>
+<p style="color:blue;">{{output}}</p>
+
+<form method="POST" action="/myadmin/addtenders/" enctype="multipart/form-data" >
+{% csrf_token %}  
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input type="text" class="form-control" name="title">
+  </div>
+  <div class="form-group">
+    <label for="subcatname">Category Name:</label>
+    <select class="form-control" name="subcatname">
+    <option>Select Category</option>
+    {% for row in sclist %}
+        <option>{{row.subcatname}}</option>    
+    {% endfor %}    
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <textarea class="form-control" name="description" rows="5"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="ldate">Launch Date:</label>
+    <input type="date" class="form-control" name="ldate">
+  </div>
+  <div class="form-group">
+    <label for="edate">End Date:</label>
+    <input type="date" class="form-control" name="edate">
+  </div>
+  <button type="submit" class="btn btn-success">Launch Tender</button>
+</form>
+
+{% endblock %}
+

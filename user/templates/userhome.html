@@ -1,0 +1,60 @@
+{% extends 'master_template.html' %}
+
+{% block trackingid %}
+<ul class="contat_infoma text_align_right">
+    <li><a href="Javascript:void(0)"> <i class="fa fa-phone" aria-hidden="true"></i>{{sunm}}</a></li>
+</ul>
+{% endblock %}
+
+{% block nav %} 
+<ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+    <a class="nav-link" href="/user/">User Home</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/user/viewtenders/">View Tenders</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/user/funds/">Funds</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/user/viewfunds/">View Funds</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/user/cpuser/">Change Password</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/user/epuser/">Edit Profile</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/login/">Logout</a>
+    </li>
+</ul>
+{% endblock %}
+
+{% block banner %}
+{% endblock %}
+
+{% block threebox %}
+{% endblock %}
+
+{% block content %} 
+<h1>Welcome To User Panel</h1>
+<h1>User Home</h1>                 
+{% endblock %}
+
+{% block footer %}
+<footer>
+   <div class="footer">
+      <div class="copyright">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-8 offset-md-2">
+                  <p>© 2022-2023 All Rights Reserved. Design by <a href="">DjangoBatch34</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+{% endblock  %}
